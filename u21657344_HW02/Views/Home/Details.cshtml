@@ -1,0 +1,19 @@
+﻿@model u21657344_HW02.Models.Pet
+
+<h2>@Model.Name</h2>
+<p><strong>Type:</strong> @Model.Type</p>
+<p><strong>Breed:</strong> @Model.Breed</p>
+<p><strong>Location:</strong> @Model.Location</p>
+<p><strong>Age:</strong> @Model.Age</p>
+<p><strong>Weight:</strong> @Model.Weight</p>
+<p><strong>Gender:</strong> @Model.Gender</p>
+<p><strong>Status:</strong> @Model.Status</p>
+<p><strong>Story:</strong> @Model.PetStory</p>
+
+<!-- If you have image paths setup, you can show the image too -->
+@if (!string.IsNullOrEmpty(Model.ImagePath))
+{
+    <img src="@Model.ImagePath" alt="@Model.Name's Image" class="img-fluid" />
+}
+
+<!-- Optionally add an "Adopt" button here for step 2. -->

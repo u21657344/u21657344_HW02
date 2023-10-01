@@ -1,0 +1,25 @@
+﻿@model u21657344_HW02.ViewModels.HomeViewModel
+@Model.AdoptedPetsCount
+
+
+
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to Pet Adoption!</h1>
+    <p class="lead">Join us in finding lovely homes for lovely pets.</p>
+    <hr class="my-4">
+    <p>Click the button below to view available pets.</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">VIEW PETS</a>
+</div>
+
+
+<div class="container">
+    <h2>Adoption Stats</h2>
+    <p><strong>Number of adopted pets:</strong> @Model.AdoptedPetsCount</p>
+    <p><strong>List of users who've adopted pets:</strong></p>
+    <ul>
+        @foreach (var user in Model.UsersWithAdoptedPets)
+        {
+                <li>@user.FirstName or any other user property you wish to display</li>
+        }
+    </ul>
+</div>

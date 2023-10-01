@@ -1,0 +1,29 @@
+﻿@model IEnumerable<u21657344_HW02.Models.Pet>
+
+<h2>All Pets</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Status</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pet in Model)
+        {
+            <tr>
+                <td>@pet.Name</td>
+                <td>@pet.Type</td>
+                <td>@pet.Age</td>
+                <td>@pet.Gender</td>
+                <td>@pet.Status</td>
+                <td><a asp-action="Details" asp-route-id="@pet.PetId">View Details</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
