@@ -6,6 +6,7 @@
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }
-        //... other properties as needed
+
+        public string FullName => $"{FirstName} {LastName}";
     }
 }
